@@ -1,0 +1,276 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand - Updated with increased green presence */
+  --color-flame: #ff5a1f;
+  --color-flame-soft: #ff7a35;
+  --color-flame-pale: #ffd9c2;
+  --color-wood: #4d291d;
+  --color-wood-deep: #2c1711;
+  --color-cream: #decbc2;
+  --color-cream-light: #f3eae5;
+  --color-paper: #fbf7f2;
+  --color-paper-soft: #f4ede6;
+  --color-ink: #221812;
+  --color-ink-soft: #6b5d52;
+  --color-line: #e7dbd2;
+  
+  /* Primary Green (increased prominence) */
+  --color-leaf: #3B6C2F;
+  --color-leaf-light: #5a8a4a;
+  --color-leaf-dark: #2a5022;
+  --color-leaf-soft: #e8f3e5;
+
+  /* Semantic (kept warm to stay in the brand ramp) */
+  --color-ok: #2f7d32;
+  --color-ok-soft: #e7f2e5;
+  --color-warn: #a16207;
+  --color-warn-soft: #fbf0df;
+  --color-danger: #c2262b;
+  --color-danger-soft: #fdecec;
+
+  /* Radii */
+  --radius-card: 1.5rem;
+  --radius-sheet: 2rem;
+  --radius-pill: 999px;
+
+  /* Motion */
+  --duration-press: 140ms;
+  --duration-state: 200ms;
+  --duration-hover: 300ms;
+
+  --ease-out-cubic: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+  --ease-out-soft: cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+@theme inline {
+  --font-sans: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-display), var(--font-body), ui-sans-serif, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-paper font-sans text-ink antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    @apply bg-flame text-white;
+  }
+
+  img {
+    @apply select-none;
+  }
+
+  section[id] {
+    scroll-margin-top: 5rem;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-flame);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  video {
+    @apply select-none;
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/* Motion tokens as utilities                                           */
+/* ------------------------------------------------------------------ */
+
+@layer utilities {
+  /* One transition declaration per interactive element: fast press, slower
+     state fades. Declared here so `.press` never overrides a color fade —
+     elements using it don't need a separate `transition-colors`. */
+  .press {
+    transition:
+      transform var(--duration-press) var(--ease-out-cubic),
+      background-color var(--duration-state) var(--ease-out-cubic),
+      border-color var(--duration-state) var(--ease-out-cubic),
+      color var(--duration-state) var(--ease-out-cubic),
+      opacity var(--duration-state) var(--ease-out-cubic);
+  }
+  .press:active {
+    transform: scale(0.97);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .press:active {
+      transform: none;
+    }
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/* Keyframes                                                            */
+/* ------------------------------------------------------------------ */
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -400px 0;
+  }
+  100% {
+    background-position: 400px 0;
+  }
+}
+
+@keyframes fotile {
+  0% {
+    transform: scale(1.06);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes kfly-in {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes kglow {
+  0%,
+  100% {
+    box-shadow: 0 18px 50px -18px rgba(255, 90, 31, 0.55);
+  }
+  50% {
+    box-shadow: 0 22px 60px -16px rgba(255, 90, 31, 0.75);
+  }
+}
+
+@keyframes kpulse-dot {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.25;
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/* Direction A — Fresh Counter: white-dominant, charcoal, forest green  */
+/* ------------------------------------------------------------------ */
+.dir-a {
+  --color-flame: #E5521A;
+  --color-flame-soft: #FF7043;
+  --color-flame-pale: #FFE8DE;
+  --color-wood: #37474F;
+  --color-wood-deep: #1A2530;
+  --color-cream: #F0EFEB;
+  --color-cream-light: #FAFAF8;
+  --color-paper: #FFFFFF;
+  --color-paper-soft: #F5F5F3;
+  --color-ink: #1A1A1A;
+  --color-ink-soft: #5A5A5A;
+  --color-line: #E4E4E0;
+  --color-leaf: #2E7D32;
+  --color-leaf-light: #43A047;
+  --color-leaf-dark: #1B5E20;
+  --color-leaf-soft: #E8F5E9;
+}
+.dir-a body { background-color: var(--color-paper); }
+
+/* ------------------------------------------------------------------ */
+/* Direction B — Heritage Butcher: warm cream, wood, terracotta, serif */
+/* ------------------------------------------------------------------ */
+.dir-b {
+  --color-flame: #B8431E;
+  --color-flame-soft: #C95E38;
+  --color-flame-pale: #F2DDD3;
+  --color-wood: #4A2C1D;
+  --color-wood-deep: #2C1711;
+  --color-cream: #E8DDD3;
+  --color-cream-light: #F3EAE2;
+  --color-paper: #FBF7F2;
+  --color-paper-soft: #F4EDE6;
+  --color-ink: #2C1711;
+  --color-ink-soft: #7A6B5F;
+  --color-line: #D4C4B5;
+  --color-leaf: #5A7B55;
+  --color-leaf-light: #6B8E66;
+  --color-leaf-dark: #3D5A39;
+  --color-leaf-soft: #EBF0E8;
+}
+.dir-b .font-display,
+.dir-b [class*="font-display"] {
+  font-family: var(--font-display-serif), var(--font-body), Georgia, serif;
+}
+
+.menu-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+
+.menu-scroll::-webkit-scrollbar-thumb {
+  background: var(--color-line);
+  border-radius: 999px;
+}
+
+.menu-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.marquee-track {
+  animation: marquee 30s linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+.media-shimmer {
+  background: linear-gradient(
+    90deg,
+    var(--color-cream-light) 25%,
+    var(--color-cream) 50%,
+    var(--color-cream-light) 75%
+  );
+  background-size: 800px 100%;
+  animation: shimmer 1.4s linear infinite;
+}
+
+.fly-in {
+  animation: kfly-in 0.55s var(--ease-out-cubic) both;
+}
+
+.live-dot {
+  animation: kpulse-dot 1.6s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+  .media-shimmer {
+    animation: none;
+  }
+  .fly-in {
+    animation: none;
+  }
+}
