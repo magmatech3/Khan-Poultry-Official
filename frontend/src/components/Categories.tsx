@@ -1,29 +1,30 @@
 import Image from "next/image";
+import { withBasePath } from "@/lib/base-path";
 
 const CATES = [
   {
     label: "Poultry",
     tag: "Fresh & whole",
     href: "/menu?category=poultry-fresh",
-    img: "/images/products/whole-chicken.webp",
+    img: withBasePath("/images/products/whole-chicken.webp"),
   },
   {
     label: "Seasoned",
     tag: "Marinated in-house",
     href: "/menu?category=poultry-seasoned",
-    img: "/images/products/seasoned-chicken.webp",
+    img: withBasePath("/images/products/seasoned-chicken.webp"),
   },
   {
     label: "Specialty Meats",
     tag: "Beef, lamb & more",
     href: "/menu?category=specialty-meats",
-    img: "/images/products/lamb-chops.webp",
+    img: withBasePath("/images/products/lamb-chops.webp"),
   },
   {
     label: "Seafood",
     tag: "Fresh every day",
     href: "/menu?category=seafood",
-    img: "/images/products/salmon.webp",
+    img: withBasePath("/images/products/salmon.webp"),
   },
 ];
 

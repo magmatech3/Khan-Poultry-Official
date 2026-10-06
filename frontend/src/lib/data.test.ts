@@ -15,6 +15,6 @@ test("assigns an image to every open location", () => {
 
   assert.equal(images.filter(Boolean).length, LOCATIONS.length);
   assert.ok(
-    images.every((image) => image?.startsWith("/images/locations/")),
+    images.every((image) => image?.includes("/images/locations/")),
   );
 });

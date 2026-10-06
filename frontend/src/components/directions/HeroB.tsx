@@ -6,22 +6,22 @@ const CATES = [
   {
     label: "Poultry",
     href: "/menu?category=poultry-fresh",
-    img: "/images/products/whole-chicken.webp",
+    img: withBasePath("/images/products/whole-chicken.webp"),
   },
   {
     label: "Seasoned",
     href: "/menu?category=poultry-seasoned",
-    img: "/images/products/seasoned-chicken.webp",
+    img: withBasePath("/images/products/seasoned-chicken.webp"),
   },
   {
     label: "Specialty Meats",
     href: "/menu?category=specialty-meats",
-    img: "/images/products/lamb-chops.webp",
+    img: withBasePath("/images/products/lamb-chops.webp"),
   },
   {
     label: "Seafood",
     href: "/menu?category=seafood",
-    img: "/images/products/salmon.webp",
+    img: withBasePath("/images/products/salmon.webp"),
   },
 ];
 

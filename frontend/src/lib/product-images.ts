@@ -1,4 +1,6 @@
-const IMG = (name: string) => `/images/products/${name}`;
+import { withBasePath } from "./base-path";
+
+const IMG = (name: string) => withBasePath(`/images/products/${name}`);
 
 const RULES: { test: RegExp; image: string }[] = [
   // Seafood

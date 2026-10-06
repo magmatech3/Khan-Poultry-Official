@@ -6,6 +6,7 @@ import {
   PHONE_LINK,
   WHATSAPP_LINK,
 } from "@/lib/data";
+import { withBasePath } from "@/lib/base-path";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -15,7 +16,7 @@ export default function Footer() {
         <div className="grid gap-12 md:grid-cols-12">
           <div className="md:col-span-5">
             <Image
-              src="/images/Khan's%20White.png"
+              src={withBasePath("/images/Khan's%20White.png")}
               alt="Khan's Poultry & Meats"
               width={160}
               height={61}
@@ -123,7 +124,7 @@ export default function Footer() {
         <div className="mt-14 flex flex-col items-center justify-between gap-5 border-t border-white/15 pt-8 md:flex-row">
           <div className="flex items-center gap-3">
             <Image
-              src="/images/HALAL%20ICON.png"
+              src={withBasePath("/images/HALAL%20ICON.png")}
               alt="Halal certified badge"
               width={34}
               height={34}

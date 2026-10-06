@@ -6,6 +6,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { GIFT_CARD_URL, INSTAGRAM_URL, PHONE_LINK } from "@/lib/data";
 import { useCart } from "@/components/cart/CartProvider";
+import { withBasePath } from "@/lib/base-path";
 
 const NAV_LINKS = [
   { label: "Home", href: "/" },
@@ -139,7 +140,7 @@ export default function Navbar() {
         <Link href="/" className="press group flex items-center gap-2.5" aria-label="Khan's Poultry & Meats home">
           <span className="relative">
             <Image
-              src="/images/KHAN'S%20LOGO.png"
+              src={withBasePath("/images/KHAN'S%20LOGO.png")}
               alt="Khan's Poultry & Meats logo"
               width={44}
               height={44}

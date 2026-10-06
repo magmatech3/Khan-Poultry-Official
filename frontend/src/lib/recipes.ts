@@ -1,3 +1,5 @@
+import { withBasePath } from "./base-path";
+
 export interface Recipe {
   slug: string;
   title: string;
@@ -15,7 +17,7 @@ export interface Recipe {
 export const RECIPES: Recipe[] = [
   {
     slug: "creamy-chicken-mushroom",
-    image: "/images/recipes/creamy-chicken-mushroom.jpg",
+    image: withBasePath("/images/recipes/creamy-chicken-mushroom.jpg"),
     title: "Creamy Chicken & Mushroom",
     category: "Chicken",
     date: "Sep 10, 2020",
@@ -53,7 +55,7 @@ export const RECIPES: Recipe[] = [
   },
   {
     slug: "spicy-stir-fry-squid-rings",
-    image: "/images/recipes/spicy-stir-fry-squid-rings.jpg",
+    image: withBasePath("/images/recipes/spicy-stir-fry-squid-rings.jpg"),
     title: "Spicy Stir-Fry Squid Rings",
     category: "Seafood",
     date: "Sep 10, 2020",
@@ -94,7 +96,7 @@ export const RECIPES: Recipe[] = [
   },
   {
     slug: "lobster-tails-garlic-lemon-butter",
-    image: "/images/recipes/lobster-tails-garlic-lemon-butter.jpg",
+    image: withBasePath("/images/recipes/lobster-tails-garlic-lemon-butter.jpg"),
     title: "Lobster Tails with Garlic Lemon Butter",
     category: "Seafood",
     date: "Sep 10, 2020",
@@ -129,7 +131,7 @@ export const RECIPES: Recipe[] = [
   },
   {
     slug: "tilapia-broccoli",
-    image: "/images/recipes/tilapia-broccoli.jpg",
+    image: withBasePath("/images/recipes/tilapia-broccoli.jpg"),
     title: "Tilapia & Broccoli",
     category: "Seafood",
     date: "Sep 10, 2020",
@@ -163,7 +165,7 @@ export const RECIPES: Recipe[] = [
   },
   {
     slug: "orange-glazed-roast-duck",
-    image: "/images/recipes/orange-glazed-roast-duck.jpg",
+    image: withBasePath("/images/recipes/orange-glazed-roast-duck.jpg"),
     title: "Orange Glazed Roast Duck",
     category: "Poultry",
     date: "Sep 10, 2020",
@@ -198,7 +200,7 @@ export const RECIPES: Recipe[] = [
   },
   {
     slug: "shrimp-kebabs",
-    image: "/images/recipes/shrimp-kebabs.jpg",
+    image: withBasePath("/images/recipes/shrimp-kebabs.jpg"),
     title: "Shrimp Kebabs",
     category: "Seafood",
     date: "Aug 25, 2020",
@@ -232,7 +234,7 @@ export const RECIPES: Recipe[] = [
   },
   {
     slug: "oven-baked-chicken-breast-spinach-mozzarella",
-    image: "/images/recipes/oven-baked-chicken-breast-spinach-mozzarella.jpg",
+    image: withBasePath("/images/recipes/oven-baked-chicken-breast-spinach-mozzarella.jpg"),
     title: "Oven-Baked Chicken Breast stuffed with Spinach and Mozzarella",
     category: "Chicken",
     date: "Aug 14, 2020",
@@ -265,7 +267,7 @@ export const RECIPES: Recipe[] = [
   },
   {
     slug: "eggs-benedict-pink-salmon",
-    image: "/images/recipes/eggs-benedict-pink-salmon.jpg",
+    image: withBasePath("/images/recipes/eggs-benedict-pink-salmon.jpg"),
     title: "Eggs Benedict with Pink Salmon",
     category: "Breakfast",
     date: "Aug 14, 2020",
@@ -299,7 +301,7 @@ export const RECIPES: Recipe[] = [
   },
   {
     slug: "steak-marinade",
-    image: "/images/recipes/steak-marinade.jpg",
+    image: withBasePath("/images/recipes/steak-marinade.jpg"),
     title: "Steak Marinade",
     category: "Beef",
     date: "Aug 14, 2020",

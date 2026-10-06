@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { PHONE_LINK, WHATSAPP_LINK } from "@/lib/data";
+import { withBasePath } from "@/lib/base-path";
 
 export default function Cta() {
   const waHref = `${WHATSAPP_LINK}?text=${encodeURIComponent(
@@ -9,7 +10,7 @@ export default function Cta() {
     <section className="cta-section relative overflow-hidden">
       <div className="cta-bg absolute inset-0">
         <Image
-          src="/images/cta-seasoned.jpg"
+          src={withBasePath("/images/cta-seasoned.jpg")}
           alt=""
           fill
           sizes="100vw"

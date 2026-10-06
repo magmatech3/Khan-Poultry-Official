@@ -10,6 +10,7 @@ import { listBrowsableCategories, listCategories, queryProducts } from "@/lib/ca
 import { listProductsSchema } from "@/lib/validation";
 import { getSettings } from "@/lib/settings";
 import type { PublicProduct } from "@/lib/catalog";
+import { withBasePath } from "@/lib/base-path";
 
 function wrap(href: string, active?: boolean) {
   return `rounded-full border px-4 py-2 text-sm font-semibold transition-colors ${
@@ -95,12 +96,12 @@ export default function MenuContent() {
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             {[
-              { label: "Whole chicken", img: "/images/products/whole-chicken.webp" },
-              { label: "Seasoned", img: "/images/products/seasoned-chicken.webp" },
-              { label: "Lamb", img: "/images/products/lamb-chops.webp" },
-              { label: "Beef", img: "/images/products/beef-steak.webp" },
-              { label: "Shrimp", img: "/images/products/shrimp.webp" },
-              { label: "Salmon", img: "/images/products/salmon.webp" },
+              { label: "Whole chicken", img: withBasePath("/images/products/whole-chicken.webp") },
+              { label: "Seasoned", img: withBasePath("/images/products/seasoned-chicken.webp") },
+              { label: "Lamb", img: withBasePath("/images/products/lamb-chops.webp") },
+              { label: "Beef", img: withBasePath("/images/products/beef-steak.webp") },
+              { label: "Shrimp", img: withBasePath("/images/products/shrimp.webp") },
+              { label: "Salmon", img: withBasePath("/images/products/salmon.webp") },
             ].map((chip) => (
               <Link
                 key={chip.label}

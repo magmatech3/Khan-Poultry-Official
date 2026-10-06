@@ -1,10 +1,11 @@
 import Image from "next/image";
+import { withBasePath } from "@/lib/base-path";
 
 const PARTNERS = [
-  { name: "Gasparillo", src: "/images/partners/gasparillo.avif" },
-  { name: "Raw Fitness", src: "/images/partners/raw-fitness.avif" },
-  { name: "Eden", src: "/images/partners/eden.avif" },
-  { name: "Energy Limited", src: "/images/partners/energy-limited.avif" },
+  { name: "Gasparillo", src: withBasePath("/images/partners/gasparillo.avif") },
+  { name: "Raw Fitness", src: withBasePath("/images/partners/raw-fitness.avif") },
+  { name: "Eden", src: withBasePath("/images/partners/eden.avif") },
+  { name: "Energy Limited", src: withBasePath("/images/partners/energy-limited.avif") },
 ];
 
 export default function Partners() {

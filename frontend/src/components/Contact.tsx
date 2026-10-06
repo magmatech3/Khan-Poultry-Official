@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { withBasePath } from "@/lib/base-path";
 
 const CHANNELS = [
   {
@@ -68,7 +69,11 @@ export default function Contact() {
       <div>
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-b from-cream-light/50 via-paper to-paper py-16 md:py-24 lg:py-32">
-        <div className="absolute inset-0 bg-[url('/images/ec845c_f896174167cb464bab2989f8ca4a0091.svg')] opacity-5" aria-hidden />
+        <div
+          className="absolute inset-0 bg-repeat opacity-5"
+          style={{ backgroundImage: `url(${withBasePath("/images/ec845c_f896174167cb464bab2989f8ca4a0091.svg")})` }}
+          aria-hidden
+        />
         <div className="relative mx-auto max-w-7xl px-5 md:px-8 lg:px-12">
           <div className="max-w-3xl mx-auto text-center">
             <span className="inline-flex items-center gap-2 rounded-full bg-leaf/10 px-4 py-1.5 text-sm font-semibold text-leaf mb-6">
@@ -182,7 +187,11 @@ export default function Contact() {
       {/* Visit Us Section */}
       <section className="py-16 md:py-24 lg:py-32 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-paper via-cream-light/50 to-cream-light/80" aria-hidden />
-        <div className="absolute inset-0 bg-[url('/images/ec845c_f896174167cb464bab2989f8ca4a0091.svg')] opacity-5" aria-hidden />
+        <div
+          className="absolute inset-0 bg-repeat opacity-5"
+          style={{ backgroundImage: `url(${withBasePath("/images/ec845c_f896174167cb464bab2989f8ca4a0091.svg")})` }}
+          aria-hidden
+        />
         <div className="relative mx-auto max-w-7xl px-5 md:px-8 lg:px-12">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div className="order-2 lg:order-1">
@@ -226,7 +235,7 @@ export default function Contact() {
             <div className="order-1 lg:order-2 relative">
               <div className="relative aspect-[4/3] lg:aspect-[5/4] rounded-3xl overflow-hidden bg-cream-light shadow-[0_30px_60px_-20px_rgba(42,30,22,0.25)]">
                 <Image
-                  src="/images/about-team.jpg"
+                  src={withBasePath("/images/about-team.jpg")}
                   alt="Khan's Poultry store interior"
                   fill
                   className="object-cover"

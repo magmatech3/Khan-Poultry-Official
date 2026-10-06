@@ -146,7 +146,7 @@ export default function AboutUs() {
             <figure className="relative overflow-hidden rounded-2xl">
               <div className="aspect-video w-full relative">
                 <Image
-                  src="/images/products/whole-chicken.webp"
+                  src={withBasePath("/images/products/whole-chicken.webp")}
                   alt="Fresh poultry at Khan's counter"
                   fill
                   className="object-cover"

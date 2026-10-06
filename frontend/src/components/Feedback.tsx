@@ -2,6 +2,7 @@
 
 import { useState, type FormEvent } from "react";
 import Image from "next/image";
+import { withBasePath } from "@/lib/base-path";
 
 
 
@@ -62,7 +63,7 @@ export default function Feedback() {
           <div className="relative flex flex-col justify-between h-full z-10 p-4 md:p-8">
             <div className="flex items-center justify-between">
               <Image
-                src="/images/KHAN'S%20LOGO.png"
+                src={withBasePath("/images/KHAN'S%20LOGO.png")}
                 alt="Khan's Poultry & Meats logo"
                 width={160}
                 height={160}

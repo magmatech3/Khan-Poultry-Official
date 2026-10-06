@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { FAVORITE_CUTS } from "@/lib/data";
+import { withBasePath } from "@/lib/base-path";
 
 const ITEMS = [
   "100% Halal certified",
@@ -16,7 +17,7 @@ const CUTS = [
     name: "Whole Chicken",
     tagline: "The daily hero",
     description: "",
-    image: "/images/products/whole-chicken-chilled.webp",
+    image: withBasePath("/images/products/whole-chicken-chilled.webp"),
     alt: "Fresh whole chicken from Khan's Poultry",
     price: "",
     orderNote: "",

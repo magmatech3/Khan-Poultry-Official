@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { withBasePath } from "@/lib/base-path";
 
 export default function Hero() {
   return (
@@ -9,7 +10,7 @@ export default function Hero() {
       aria-label="Fresh halal poultry, meat and seafood"
     >
       <Image
-        src="/images/Hero%20bg.png"
+        src={withBasePath("/images/Hero%20bg.png")}
         alt=""
         aria-hidden
         fill
@@ -21,7 +22,7 @@ export default function Hero() {
         <div className="relative mx-auto max-w-7xl px-5 pb-12 pt-8 md:px-8 md:pb-16 md:pt-12">
           <div className="max-w-2xl">
             <Image
-              src="/images/KHAN'S%20LOGO.png"
+              src={withBasePath("/images/KHAN'S%20LOGO.png")}
               alt="Khan's Poultry & Meats"
               width={120}
               height={120}

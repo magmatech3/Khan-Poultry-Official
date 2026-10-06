@@ -1,49 +1,50 @@
 import Image from "next/image";
 import { INSTAGRAM_URL } from "@/lib/data";
+import { withBasePath } from "@/lib/base-path";
 
 const POSTS = [
   {
-    src: "/images/social/ig_DdHHDfLHHr2.jpg",
+    src: withBasePath("/images/social/ig_DdHHDfLHHr2.jpg"),
     alt: "Fresh cuts from the Khan's Poultry counter",
     aspect: "aspect-[3/4]",
   },
   {
-    src: "/images/social/ig_DdXHKY6yO4L.jpg",
+    src: withBasePath("/images/social/ig_DdXHKY6yO4L.jpg"),
     alt: "Today's selection at the Khan's counter",
     aspect: "aspect-[4/3]",
   },
   {
-    src: "/images/social/ig_DdRPb73lhdt.jpg",
+    src: withBasePath("/images/social/ig_DdRPb73lhdt.jpg"),
     alt: "Fresh poultry ready for the weekend",
     aspect: "aspect-[3/4]",
   },
   {
-    src: "/images/social/ig_DadjXl2qx1U.jpg",
+    src: withBasePath("/images/social/ig_DadjXl2qx1U.jpg"),
     alt: "Khan's Poultry & Meats — fresh every day",
     aspect: "aspect-square",
   },
   {
-    src: "/images/social/ig_DdZ1Qe6gWW-.jpg",
+    src: withBasePath("/images/social/ig_DdZ1Qe6gWW-.jpg"),
     alt: "What's roasting at Khan's today",
     aspect: "aspect-square",
   },
   {
-    src: "/images/social/ig_DaQbFcrDyTW.jpg",
+    src: withBasePath("/images/social/ig_DaQbFcrDyTW.jpg"),
     alt: "Halal certified, cut fresh to order",
     aspect: "aspect-[3/4]",
   },
   {
-    src: "/images/social/ig_Da0iLH5RxWr.jpg",
+    src: withBasePath("/images/social/ig_Da0iLH5RxWr.jpg"),
     alt: "The daily catch at Khan's seafood counter",
     aspect: "aspect-square",
   },
   {
-    src: "/images/social/ig_DaiIZA4qhzL.jpg",
+    src: withBasePath("/images/social/ig_DaiIZA4qhzL.jpg"),
     alt: "Family favourites from all 8 stores",
     aspect: "aspect-[3/4]",
   },
   {
-    src: "/images/social/ig_DbBxqZ5yMiB.jpg",
+    src: withBasePath("/images/social/ig_DbBxqZ5yMiB.jpg"),
     alt: "Stocked, fresh and ready for you",
     aspect: "aspect-square",
   },

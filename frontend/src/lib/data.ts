@@ -1,3 +1,5 @@
+import { withBasePath } from "./base-path";
+
 export type Location = {
   name: string;
   area: string;
@@ -12,7 +14,7 @@ export const LOCATIONS: Location[] = [
   {
     name: "Market Street",
     area: "Marabella",
-    image: "/images/locations/Marabella.webp",
+    image: withBasePath("/images/locations/Marabella.webp"),
     phone: "344-CHIK (2445)",
     phoneHref: "tel:+18683442445",
     mapQuery: "Market Street Marabella Trinidad",
@@ -25,7 +27,7 @@ export const LOCATIONS: Location[] = [
   {
     name: "Gulf View",
     area: "La Romain",
-    image: "/images/locations/Gulf%20view.webp",
+    image: withBasePath("/images/locations/Gulf%20view.webp"),
     phone: "321-CHIK (2445)",
     phoneHref: "tel:+18683212445",
     mapQuery: "Gulf View La Romain Trinidad",
@@ -38,7 +40,7 @@ export const LOCATIONS: Location[] = [
   {
     name: "Munroe Road",
     area: "Cunupia",
-    image: "/images/locations/Munroe%20Road.webp",
+    image: withBasePath("/images/locations/Munroe%20Road.webp"),
     phone: "321-CHIK (2445)",
     phoneHref: "tel:+18683212445",
     mapQuery: "Munroe Road Cunupia Trinidad",
@@ -51,7 +53,7 @@ export const LOCATIONS: Location[] = [
   {
     name: "Main Road",
     area: "Marabella",
-    image: "/images/locations/Main%20Road.jpeg",
+    image: withBasePath("/images/locations/Main%20Road.jpeg"),
     phone: "658-CHIK (2445)",
     phoneHref: "tel:+18686582445",
     mapQuery: "Main Road Marabella Trinidad",
@@ -63,7 +65,7 @@ export const LOCATIONS: Location[] = [
   {
     name: "Gasparillo Junction",
     area: "Gasparillo",
-    image: "/images/locations/Gasparillo%20Junction.webp",
+    image: withBasePath("/images/locations/Gasparillo%20Junction.webp"),
     phone: "394-CHIK (2445)",
     phoneHref: "tel:+18683942445",
     mapQuery: "Gasparillo Junction Trinidad",
@@ -76,7 +78,7 @@ export const LOCATIONS: Location[] = [
   {
     name: "Rodney Road",
     area: "San Juan",
-    image: "/images/locations/Rodney%20Road.webp",
+    image: withBasePath("/images/locations/Rodney%20Road.webp"),
     phone: "321-CHIK (2445)",
     phoneHref: "tel:+18683212445",
     mapQuery: "Rodney Road San Juan Trinidad",
@@ -88,7 +90,7 @@ export const LOCATIONS: Location[] = [
   {
     name: "Diego Martin",
     area: "Diego Martin",
-    image: "/images/locations/Diego%20Martin.webp",
+    image: withBasePath("/images/locations/Diego%20Martin.webp"),
     phone: "321-CHIK (2445)",
     phoneHref: "tel:+18683212445",
     mapQuery: "Diego Martin Trinidad",
@@ -115,7 +117,7 @@ export const FAVORITE_CUTS: Cut[] = [
     tagline: "The daily hero",
     description:
       "Fresh-chilled, halal whole chicken — perfect for roasts, pot dishes, or a simple Saturday fry. Picked fresh every morning, delivered to every store.",
-    image: "/images/products/whole-chicken.webp",
+    image: withBasePath("/images/products/whole-chicken.webp"),
     alt: "Fresh whole chicken from Khan's Poultry",
     price: "Market price",
     orderNote: "I'd like to order a whole chicken",
@@ -125,7 +127,7 @@ export const FAVORITE_CUTS: Cut[] = [
     tagline: "Jerk, herb & ready to cook",
     description:
       "Marinated in-house — authentic jerk, Mediterranean herb, and our spicy 'Khan's blend'. Straight to the grill, no thinking required.",
-    image: "/images/products/seasoned-chicken.webp",
+    image: withBasePath("/images/products/seasoned-chicken.webp"),
     alt: "Seasoned chicken skewers ready to grill",
     price: "From $19/lb",
     orderNote: "I'd like to order seasoned chicken",
@@ -135,7 +137,7 @@ export const FAVORITE_CUTS: Cut[] = [
     tagline: "From water to counter",
     description:
       "Salmon, shrimp, mahi-mahi and more — chilled on ice and never frozen twice. Rich, flaky, and ready for the pan the same day.",
-    image: "/images/products/salmon.webp",
+    image: withBasePath("/images/products/salmon.webp"),
     alt: "Fresh salmon fillet on ice",
     price: "From $25/lb",
     orderNote: "I'd like to order fresh seafood",
